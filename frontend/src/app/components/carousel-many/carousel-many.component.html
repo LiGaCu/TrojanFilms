@@ -1,0 +1,42 @@
+<div>
+    <h2 class="text-white" >{{cata}}</h2>
+    <!-- Mobile section : one image per slide -->
+    <ngb-carousel class="single-carousel" *ngIf="isMobile && dataReceived.length" [interval]="0" [showNavigationArrows]="true" [showNavigationIndicators]="false">
+        <ng-template ngbSlide *ngFor="let video of dataReceived">
+            <div class="single-img-container">
+                 <!--For Movies-->
+                <a *ngIf="!video.isTVshow" [routerLink]="'/watch/movie/'+video.id">
+                    <img [src]="video.poster_path" class="img-fluid">
+                    <div class="Imgmask_mobile"><p class="text-white">{{video.title}}</p></div>
+                </a>
+                <!--For TV Shows-->
+                <a *ngIf="video.isTVshow" [routerLink]="'/watch/tv/'+video.id">
+                    <img [src]="video.poster_path" class="img-fluid">
+                    <div class="Imgmask_mobile"><p class="text-white">{{video.name}}</p></div>
+                </a>
+            </div>
+            
+            
+        </ng-template>
+    </ngb-carousel>
+
+    <!-- Desktop section : multiple images per slide -->
+    <ngb-carousel class="multi-carousel" *ngIf="!isMobile && dataReceived_arr.length" [interval]="0" [showNavigationArrows]="true" [showNavigationIndicators]="true">
+        <ng-template ngbSlide *ngFor="let group of dataReceived_arr">
+            <div class="d-flex multi-img-container">
+                <div class="img-wrapper mx-3" *ngFor="let video of group">
+                    <!--For Movies-->
+                    <a *ngIf="!video.isTVshow" [routerLink]="'/watch/movie/'+video.id">
+                        <img [src]="video.poster_path" class="img-fluid">
+                        <div class="Imgmask"><p class="text-white">{{video.title}}</p></div>
+                    </a>
+                    <!--For TV Shows-->
+                    <a *ngIf="video.isTVshow" [routerLink]="'/watch/tv/'+video.id">
+                        <img [src]="video.poster_path" class="img-fluid">
+                        <div class="Imgmask"><p class="text-white">{{video.name}}</p></div>
+                    </a>
+                </div>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>

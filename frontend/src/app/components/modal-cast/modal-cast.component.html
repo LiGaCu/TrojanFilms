@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h4 *ngIf="person_details.name" class="modal-title"><strong>{{person_details.name}}</strong></h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body row mx-0">
+    <div class="col-12 col-md-2"><img class="img-fluid" [src]="person_details.profile_path"></div>
+    <div class="col-12 col-md-10 pl-2">
+        <p>
+            <span *ngIf="person_details.birthday"> Birth: {{person_details.birthday}} <br></span> 
+            <span *ngIf="person_details.place_of_birth"> Birth Place: {{person_details.place_of_birth}} <br></span>
+            <span *ngIf="person_details.gender"> Gender: {{person_details.gender}} <br></span> 
+            <span *ngIf="person_details.homepage"> Website: {{person_details.homepage}} <br></span> 
+            <span *ngIf="person_details.known_for_department"> known for: {{person_details.known_for_department}} <br></span>
+            <span *ngIf="person_details.alias_str"> Also Known as: {{person_details.alias_str}} <br></span>
+            <br>
+            <a class="mr-2" *ngIf="person_externals.imdb_id" [href]="person_externals.imdb_id" target="_blank"><img [src]="imdb_icon" style="width: 32px;"></a>
+            <a class="mr-2" *ngIf="person_externals.instagram_id" [href]="person_externals.instagram_id" target="_blank"><img [src]="instagram_icon" style="width: 32px;"></a>
+            <a class="mr-2" *ngIf="person_externals.facebook_id" [href]="person_externals.facebook_id" target="_blank"><img [src]="facebook_icon" style="width: 32px;"></a>
+            <a class="mr-2" *ngIf="person_externals.twitter_id" [href]="person_externals.twitter_id" target="_blank"><img [src]="twitter_icon" style="width: 32px;"></a>
+        </p>
+    </div>
+    <div *ngIf="person_details.biography" class="col col-12 mt-2">
+        <h4><strong>Biography</strong></h4>
+        <p> {{person_details.biography}} </p>
+    </div>
+</div>
+<!-- <div class="modal-footer">
+</div> -->

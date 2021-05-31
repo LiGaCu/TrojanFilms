@@ -1,0 +1,19 @@
+/* ::ng-deep [id^="ngb-typeahead-"]{ 
+    background-color:rgb(14, 8, 51);
+    border: white 1px solid;
+    color: white;
+} */
+::ng-deep .dropdown-menu.show { 
+    background-color:rgb(14, 8, 51);
+    border: white 1px solid;
+}
+::ng-deep .dropdown-item { 
+    color: white !important;
+    padding-left: 20px;
+}
+.form-control{
+    background-color: transparent;
+    color: white;
+    border: white 2px;
+    border-style: none none solid none;
+}

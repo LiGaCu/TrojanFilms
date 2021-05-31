@@ -1,0 +1,21 @@
+<div style="height: 100px;"></div>
+<div class="row m-0 justify-content-center">
+    <app-carousel-main class="col col-11 col-md-9" [dataReceived] = "playingMovies" [isMobile] = "isMobile"></app-carousel-main>
+    <!-- <div class="w-100"></div> -->
+    <app-carousel-many class="col col-11 col-md-9" *ngIf="continuelist.length" [dataReceived] = "continuelist" [dataReceived_arr] = "continuelist_arr" [cata]="'Continue Watching'" [isMobile] = "isMobile" ></app-carousel-many>
+
+    <app-carousel-many class="col col-11 col-md-9" [dataReceived] = "popularMovies" [dataReceived_arr] = "popularMovies_arr" [cata]="'Popular Movies'" [isMobile] = "isMobile" ></app-carousel-many>
+   
+    <app-carousel-many class="col col-11 col-md-9" [dataReceived] = "topRatedMovies" [dataReceived_arr] = "topRatedMovies_arr" [cata]="'Top Rated Movies'" [isMobile] = "isMobile" ></app-carousel-many>
+    
+    <app-carousel-many class="col col-11 col-md-9" [dataReceived] = "trendingMovies" [dataReceived_arr] = "trendingMovies_arr" [cata]="'Trending Movies'" [isMobile] = "isMobile" ></app-carousel-many>
+    
+    
+    <app-carousel-many class="col col-11 col-md-9" [dataReceived] = "popularTVshows" [dataReceived_arr] = "popularTVshows_arr" [cata]="'Popular TV Shows'" [isMobile] = "isMobile" ></app-carousel-many>
+    
+    <app-carousel-many class="col col-11 col-md-9" [dataReceived] = "topRatedTVshows" [dataReceived_arr] = "topRatedTVshows_arr" [cata]="'Top Rated TV Shows'" [isMobile] = "isMobile" ></app-carousel-many>
+    
+    <app-carousel-many class="col col-11 col-md-9" [dataReceived] = "trendingTVshows" [dataReceived_arr] = "trendingTVshows_arr" [cata]="'Trending TV Shows'" [isMobile] = "isMobile" ></app-carousel-many>
+
+</div>
+<div style="height: 100px;"></div>

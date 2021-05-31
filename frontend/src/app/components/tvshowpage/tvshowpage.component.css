@@ -1,0 +1,49 @@
+
+.mutiinfo h1{
+    font-size: 50px;
+}
+.mutiinfo p{
+    font-size: 18px;
+}
+
+.scrolling-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.scrolling-card {
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 10px;
+
+    width: 15%;
+    min-width: 180px;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    margin-right: 30px;
+    text-align: center;
+    white-space: normal;
+}
+.scrolling-card :hover{
+    cursor: pointer;
+}
+.review-card{
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    margin-bottom: 30px;
+}
+.img-wrapper{
+    max-width: 180px;
+    padding: 45px;
+}
+.img-wrapper img{
+    border-radius: 45px;
+}
+.review-content{
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}

@@ -1,0 +1,76 @@
+h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.single-img-container{
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+}
+.Imgmask_mobile{
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,1));
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 120px;
+    line-height: 120px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+.Imgmask_mobile p{
+    display: inline-block;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+.multi-img-container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.img-wrapper{
+    width: 15%;
+    position: relative;
+}
+.img-wrapper:hover img{
+    transform: scale(1.1);
+}
+.img-wrapper:hover .Imgmask{
+    display: block;
+    transform: scale(1.1);
+}
+.Imgmask{
+    display: none;
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,1));
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 120px;
+    line-height: 120px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+}
+.Imgmask p{
+    display: inline-block;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+.multi-carousel ::ng-deep .carousel-indicators{
+    bottom: -60px;
+}
+.multi-carousel ::ng-deep .carousel-control-prev{
+    width: 50px;
+}
+.multi-carousel ::ng-deep .carousel-control-next{
+    width: 50px;
+}
+.single-carousel ::ng-deep .carousel-control-prev{
+    width: 50px;
+}
+.single-carousel ::ng-deep .carousel-control-next{
+    width: 50px;
+}

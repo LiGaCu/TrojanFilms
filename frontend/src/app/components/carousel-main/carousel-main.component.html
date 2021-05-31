@@ -1,0 +1,29 @@
+<!-- Mobile section : one image per slide -->
+<ngb-carousel *ngIf="isMobile && dataReceived.length" class="main-carousel" [interval]="2000" [showNavigationArrows]="true" [showNavigationIndicators]="false">
+    <ng-template ngbSlide *ngFor="let video of dataReceived; index as i">
+        <!-- <div class="carousel-caption">
+            <h3>{{video.title}}</h3>
+        </div> -->
+        <a [routerLink]="'watch/movie/'+video.id">
+            <div class="picsum-img-wrapper">
+                <img [src]="video.backdrop_path" class="img-fluid" alt="My image {{i + 1}} description">
+                <div class="Imgmask_mobile"><p class="text-white">{{video.title}}</p></div>
+            </div>
+        </a>
+    </ng-template>
+</ngb-carousel>
+
+<!-- Desktop section : multiple images per slide -->
+<ngb-carousel *ngIf="!isMobile && dataReceived.length" class="main-carousel" [interval]="2000" [showNavigationArrows]="true" [showNavigationIndicators]="true">
+    <ng-template ngbSlide *ngFor="let video of dataReceived; index as i">
+        <!-- <div class="carousel-caption">
+            <h3>{{video.title}}</h3>
+        </div> -->
+        <a [routerLink]="'watch/movie/'+video.id">
+            <div class="picsum-img-wrapper">
+                <img [src]="video.backdrop_path" class="img-fluid" alt="My image {{i + 1}} description">
+                <div class="Imgmask"><p class="text-white">{{video.title}}</p></div>
+            </div>
+        </a>
+    </ng-template>
+</ngb-carousel>

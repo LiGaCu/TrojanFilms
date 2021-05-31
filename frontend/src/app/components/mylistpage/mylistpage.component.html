@@ -1,0 +1,39 @@
+<div style="height: 100px;"></div>
+<div class="row m-0 justify-content-center">
+    <h1 *ngIf="!watchlist.length" class="col-12 text-white" style="text-align: center;"> No items found in Watchlist. </h1>
+    <div *ngIf="watchlist.length && !isMobile" class="col col-9">
+        <h1 class="text-white mb-4">My WatchList</h1>
+        <div class="row m-0 multi-img-container">
+            <div class="img-wrapper col-12 col-md-2 px-0 py-4" *ngFor="let video of watchlist">
+                <!--For Movies-->
+                <a *ngIf="!video.isTVshow" [routerLink]="'/watch/movie/'+video.id">
+                    <img [src]="video.poster_path" style="width: 90%;">
+                    <div class="Imgmask"><p class="text-white">{{video.title}}</p></div>
+                </a>
+                <!--For TV Shows-->
+                <a *ngIf="video.isTVshow" [routerLink]="'/watch/tv/'+video.id">
+                    <img [src]="video.poster_path"style="width: 90%;">
+                    <div class="Imgmask"><p class="text-white">{{video.name}}</p></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="watchlist.length && isMobile" class="col col-9">
+        <h1 class="text-white mb-4">My WatchList</h1>
+        <div class="row m-0 multi-img-container">
+            <div class="img-wrapper-mobile col-12 col-md-2 px-0 py-4" *ngFor="let video of watchlist">
+                <!--For Movies-->
+                <a *ngIf="!video.isTVshow" [routerLink]="'/watch/movie/'+video.id">
+                    <img [src]="video.poster_path" style="width: 90%;">
+                    <div class="Imgmask_mobile"><p class="text-white">{{video.title}}</p></div>
+                </a>
+                <!--For TV Shows-->
+                <a *ngIf="video.isTVshow" [routerLink]="'/watch/tv/'+video.id">
+                    <img [src]="video.poster_path"style="width: 90%;">
+                    <div class="Imgmask_mobile"><p class="text-white">{{video.name}}</p></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 100px;"></div>
