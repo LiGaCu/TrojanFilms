@@ -13,7 +13,9 @@ You can try it out first: https://lijiatong1997.com/TrojanFilms
 
 ### Introduction
 
-This project was developed with Angular and Bootstrap for frontend and Express for backend, hosted on Google Cloud Platform. During the development and tests, API server and web page server were fulfilled together by the same server running on GCP APP Engine. However, they are designed to operating separately (like right now, web pages are served by GitHub Pages and backend server are running on AWS). You can try it out locally on your machine by:
+Trojan Film a web application with user friendly layout that enables users to search for movies and TV series, browse details, watch trailers, share on social media, know about cast and crew, get recommended videos and so on. The original data for Trojan Film is from [The Movie Database (TMDB)](https://www.themoviedb.org/documentation/api).
+
+This project was developed with Angular and Bootstrap for frontend and Express.js for backend, hosted on Google Cloud Platform. During the development and tests, API server and web page server were fulfilled together by the same server running on GCP APP Engine. However, they are designed to operating separately (like right now, web pages are served by GitHub Pages and backend server are running on AWS). You can try it out locally on your machine by:
 1. Starting the backend server
  * set your TMDB API key as an environment variable `TMDBAPI` (if you don't have one, it is free to register one)
  * `npm install` in the backend dictionary
